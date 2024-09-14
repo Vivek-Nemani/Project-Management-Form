@@ -27,9 +27,9 @@ function getProIdAsJsonObj(){
 function fillData(jsonObj){
     saveRecNo2LS(jsonObj);
     var record = JSON.parse(jsonObj.data).record;
-    $("#proName").val(record.proname);
-    $("#proemp").val(record.empname);
-    $("#prodate").val(record.date);
+    $("#proname").val(record.name);
+    $("#proemp").val(record.proemp);
+    $("#prodate").val(record.prodate);
     $("#deadline").val(record.deadline);
     
 }
