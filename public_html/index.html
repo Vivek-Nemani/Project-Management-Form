@@ -12,7 +12,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"> </script>
-        <script src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"> </script>
+        <script src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+
     </head>
     <body>
         <div class="container">
@@ -22,12 +23,12 @@ and open the template in the editor.
             <form id="Prjform" method="get">
                 <div class="form-group">
                     <label>Project-ID:</label>
-                    <input type="text" class="form-control" id="proID" onchange="getEmp()"
-                           placeholder="Enter Project ID" required>
+                    <input type="text" class="form-control" id="proID" placeholder="Enter Project ID" required
+                           onchange= "getPro()">
                 </div>
                 <div class="form-group">
                     <label>Project-Name:</label>
-                    <input type="text" class="form-control" id="pron`ame"
+                    <input type="text" class="form-control" id="proname"
                            placeholder="Enter Project Name">
                 </div>
                 <div class="form-group">

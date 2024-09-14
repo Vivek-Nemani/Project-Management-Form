@@ -8,7 +8,7 @@ var jpdbIRL = "/api/irl";
 var jpdbIML = "/api/iml";
 var proDBName = "PROJECT-TABLE";
 var proRelationName = "COLLEGE-DB";
-var connToken = "";
+var connToken = "90932027|-31949219526118561|90962180";
 
 $("#proID").focus();
 
@@ -91,7 +91,7 @@ function validateData(){
     return JSON.stringify(jsonStrObj);
 }
 function getPro(){
-    var proIDJsonObj = getEmpIdAsJsonObj();
+    var proIDJsonObj = getProIdAsJsonObj();
     var getRequest = createGET_BY_KEYRequest(connToken, proDBName, proRelationName, proIDJsonObj);
     jQuery.ajaxSetup({async: false});
     var resJsonObj = executeCommandAtGivenBaseUrl(getRequest, jpdbBaseURL, jpdbIRL);
@@ -124,7 +124,7 @@ function saveData() {
 function changeData() {
     $("#change").prop("disabled",true);
     jsonChg = validateData();
-    var updateRequest = createUPDATETecordRequest(connToken, jsonChg, proDBName, proRelationName, localStorage.getItem("recno"));
+    var updateRequest = createUPDATERecordRequest(connToken, jsonChg, proDBName, proRelationName, localStorage.getItem("recno"));
     jQuery.ajaxSetup({async: false});
     var resJsonObj = executeCommandAtGivenBaseUrl(updateRequest, jpdbBaseURL, jpdbIML);
     jQuery.ajaxSetup({async: true});
